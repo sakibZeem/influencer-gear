@@ -57,6 +57,11 @@ header
     font-weight: 600;
 }
 
+.navbar li a:hover {
+    color: #E02C6D;
+    border-bottom: 5px solid #E02C6D;
+}
+
 /*--------
 banner
 --------*/
@@ -86,7 +91,6 @@ banner
 .banner-thumbnail {
     width: 440px;
     height: 414px;
-    z-index: 1;
 }
 
 /*------
@@ -134,7 +138,11 @@ sponsor
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 }
-.collection .button{
+.product-container .filled{
+    color:  #FB8200;
+}
+
+.collection .button {
     background-color: white;
     color: rgba(224, 44, 109, 0.87);
 }
@@ -142,49 +150,119 @@ sponsor
 /* ------
 article
 --------- */
-.article-container{
+.article-container {
     display: flex;
     align-items: center;
     gap: 100px;
     justify-content: center;
     margin: 100px;
 }
-.article-container .button{
+
+.article-container .button {
     border-radius: 0px;
 }
-.article-description{
+
+.article-description {
     color: #6C6C6C;
-font-size: 16px;
-font-weight: 700;
-line-height: 28px;
-width: 501px;
-height: 88px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    width: 501px;
+    height: 88px;
 }
 
 /* -----
 footer
 ------ */
-.footer{
+.footer {
     background: #0A0826;
     text-align: center;
-    color:  Gray 300;
+    color: Gray 300;
 }
-.footer .header-tittle{
+
+.footer .header-tittle {
     color: #FFF;
 }
-.footer-para{
+
+.footer-para {
     color: var(--text-gray-300, #D9DBE1);
-font-size: 14px;
-font-weight: 700;
-line-height: 24px; 
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
 }
-.social-media{
+
+.social-media {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
 }
-.social-media a{
+
+.social-media a {
     text-decoration: none;
     color: #FFF
+}
+
+/* ---------
+Media Queries
+----------- */
+@media only screen and (max-width: 687px) {
+
+    .header,
+    .navbar {
+        flex-direction: column;
+        gap: 9px;
+        text-align: center;
+    }
+
+    .banner {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .banner-thumbnail img {
+        width: 202px;
+        height: 190px;
+
+    }
+
+    hr {
+        width: 0;
+    }
+
+    .sponsor-container {
+        flex-wrap: wrap;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .collection {
+        width: 100%;
+    }
+
+    .article-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .article-container img {
+        width: 299px;
+        height: 188px;
+
+    }
+
+    .article-description {
+        width: 305px;
+        height: 138px;
+    }
+
+    .footer {
+        margin: 0;
+    }
 }
